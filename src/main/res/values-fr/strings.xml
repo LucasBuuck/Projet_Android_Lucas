@@ -21,7 +21,12 @@
 
     <string name="apimenu">Utilisateurs</string>
     <string name="email">Email : </string>
-    <string name="phone">"Numéro de tél. : "</string>
-    <string name="username">"Pseudo : "</string>
+    <string name="phone">Numéro de tél. : </string>
+    <string name="username">Pseudo : </string>
+
+    <string name="savebutton">Sauvegarder</string>
+    <string name="dataName">Nom</string>
+    <string name="dataSurname">Prénom</string>
+    <string name="toastsave">a bien été sauvegardé !</string>
 
 </resources>

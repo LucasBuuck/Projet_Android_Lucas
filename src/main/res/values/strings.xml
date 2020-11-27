@@ -20,5 +20,10 @@
     <string name="apimenu">Users</string>
     <string name="username">"Username : "</string>
     <string name="email">Email : </string>
-    <string name="phone">"Phone number : "</string>
+    <string name="phone">Phone number : </string>
+
+    <string name="savebutton">Save</string>
+    <string name="dataName">Name</string>
+    <string name="dataSurname">Surname</string>
+    <string name="toastsave">has been saved here!</string>
 </resources>

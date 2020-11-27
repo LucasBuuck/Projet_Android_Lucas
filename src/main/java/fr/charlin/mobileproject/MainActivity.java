@@ -22,9 +22,14 @@ import org.jetbrains.annotations.Nullable;
 public class MainActivity extends AppCompatActivity {
     private CompositeDisposable disposable = new CompositeDisposable();
 
-    ImageView img;
-    private static int REQUEST_IMAGE_CAPTURE = 1;
     private Fragment activeFragment;
+
+    private final String DATA_FRAGMENT_TAG = "datafragtag";
+
+    private DataFragment dataFragment;
+    private AlertFragment alertFragment;
+    private CameraFragment cameraFragment;
+    private ApiFragment apiFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         AnimatedBottomBar abb = findViewById(R.id.bottom_bar);
-
+        showFragment(new DataFragment());
         abb.setOnTabSelectListener(new AnimatedBottomBar.OnTabSelectListener() {
             @Override
             public void onTabSelected(int i, @Nullable AnimatedBottomBar.Tab tab, int i1, @NotNull AnimatedBottomBar.Tab tab1) {
@@ -42,40 +47,49 @@ public class MainActivity extends AppCompatActivity {
                 }
                 switch(i1){
                     case 0:
+                        if(savedInstanceState != null){
+                            dataFragment = (DataFragment) getSupportFragmentManager().findFragmentByTag(DATA_FRAGMENT_TAG);
+                        }
+                        showFragment(dataFragment = dataFragment == null?new DataFragment(): dataFragment);
                         break;
                     case 1:
-                        showFragment(new AlertFragment());
+                        showFragment(alertFragment = alertFragment == null?new AlertFragment(): alertFragment);
                         break;
                     case 2:
-                        showFragment(new CameraFragment());
+                        showFragment(cameraFragment = cameraFragment == null?new CameraFragment(): cameraFragment);
                         break;
                     case 3:
-                        showFragment(new ApiFragment());
+                        showFragment(apiFragment = apiFragment == null?new ApiFragment(): apiFragment);
                         break;
                 }
-            }
 
+            }
             @Override
             public void onTabReselected(int i, @NotNull AnimatedBottomBar.Tab tab) {
 
             }
-
         });
-    }
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            Bitmap bit = (Bitmap) data.getExtras().get("data");
-            img.setImageBitmap(bit);
-        }
 
     }
+
 
     private void showFragment(Fragment fragment){
             activeFragment = fragment;
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.layoutFragment, activeFragment)
                     .commit();
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (dataFragment != null &&getSupportFragmentManager().findFragmentById(dataFragment.getId()) != null)
+            getSupportFragmentManager().findFragmentById(dataFragment.getId()).setRetainInstance(true);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (dataFragment != null && getSupportFragmentManager().findFragmentById(dataFragment.getId()) != null)
+            getSupportFragmentManager().findFragmentById(dataFragment.getId()).getRetainInstance();
     }
 }
