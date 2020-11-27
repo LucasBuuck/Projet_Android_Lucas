@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab_home"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/tab_alarm"
+        android:icon="@android:drawable/ic_lock_idle_low_battery"
+        android:title="@string/tests" />
+    <item
+        android:id="@+id/tab_bread"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="@string/camera" />
+    <item
+        android:id="@+id/tab_cart"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="@string/apimenu" />
+</menu>

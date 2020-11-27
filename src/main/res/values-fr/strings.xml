@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ProjetMobile</string>
+    <string name="channel_name">chan_n</string>
+    <string name="channel_description">chan_d</string>
+    <string name="titleNotification">Salut je suis un titre !</string>
+    <string name="descNotification">Salut je suis une description de notification !</string>
+
+    <string name="button_dialog">Bouton dialogue</string>
+    <string name="button_notif">Bouton notification</string>
+    <string name="button_toast">Bouton \'toast\'</string>
+
+    <string name="randomToast">Coucou je suis un toast!</string>
+    <string name="setTime">"Vous avez saisi : "</string>
+    <string name="home">"Accueil"</string>
+    <string name="tests">"Tests"</string>
+    <string name="camera">"Camera"</string>
+
+    <string name="title_activity_users_details">DetailsActivity</string>
+    <string name="listUsers">Liste des utilisateurs</string>
+    <string name="detailsUsers">Détails de l\'utilisateur</string>
+
+    <string name="apimenu">Utilisateurs</string>
+    <string name="email">Email : </string>
+    <string name="phone">"Numéro de tél. : "</string>
+    <string name="username">"Pseudo : "</string>
+
+</resources>

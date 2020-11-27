@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MobileProject</string>
+    <string name="channel_name">chan_n</string>
+    <string name="channel_description">chan_d</string>
+    <string name="titleNotification">Hey i\'m a title !</string>
+    <string name="descNotification">Hey i\'m a description of a notification !</string>
+
+    <string name="button_dialog">dialog button</string>
+    <string name="button_notif">notification button</string>
+    <string name="button_toast">toast button</string>
+    <string name="randomToast">Hey i\'m a toast!</string>
+    <string name="setTime">"You have entered : "</string>
+    <string name="home">"Home"</string>
+    <string name="tests">"Tests"</string>
+    <string name="camera">"Camera"</string>
+
+    <string name="title_activity_users_details">DetailsActivity</string>
+    <string name="listUsers">Users List</string>
+    <string name="detailsUsers">Users details</string>
+    <string name="apimenu">Users</string>
+    <string name="username">"Username : "</string>
+    <string name="email">Email : </string>
+    <string name="phone">"Phone number : "</string>
+</resources>

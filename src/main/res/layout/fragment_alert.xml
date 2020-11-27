@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlertFragment"
+    android:gravity="center"
+    android:background="#D8DCF0">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button_notification"
+            android:layout_width="208dp"
+            android:layout_height="105dp"
+            android:layout_marginTop="68dp"
+            android:background="#CA2525"
+            android:backgroundTint="#A54D4D"
+            android:text="@string/button_notif"
+            android:textSize="18sp"
+            app:iconTint="#BA1616"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="#CA1111"
+            app:strokeColor="#B61414" />
+
+        <Button
+            android:id="@+id/button_dialog"
+            android:layout_width="208dp"
+            android:layout_height="105dp"
+            android:layout_marginTop="48dp"
+            android:backgroundTint="#D54141"
+            android:text="@string/button_dialog"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_toast" />
+
+        <Button
+            android:id="@+id/button_toast"
+            android:layout_width="208dp"
+            android:layout_height="105dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#B662D5"
+            android:text="@string/button_toast"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_notification" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="204dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_dialog" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
